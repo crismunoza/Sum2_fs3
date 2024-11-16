@@ -1,0 +1,77 @@
+<div class="container mt-5">
+  <div class="row">
+    <div *ngFor="let prod of productos" class="col-md-6 mb-4">
+      <div class="card">
+        <div class="row g-0">
+          <div class="col-md-4 d-flex justify-content-center align-items-start" style="padding-top: 15px;">
+            <img [src]="prod.url" class="img-fluid rounded-start" alt="{{ prod.nombre }}"
+              style="max-width: 100%; height: auto; object-fit: contain;">
+          </div>
+
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{ prod.nombre }}</h5>
+              <p class="card-text">{{ prod.descripcion }}</p>
+              <p class="card-text"><strong>Precio:</strong> ${{ prod.precio }}</p>
+              <p class="card-text"><strong>Stock:</strong> {{ prod.stock }}</p>
+
+              <!-- Edit form -->
+              <form (ngSubmit)="guardarProducto(prod)" #formulario="ngForm">
+                <div class="mb-3">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="nombre" [(ngModel)]="prod.nombre" name="nombre" 
+                    #nombre="ngModel" required>
+                  <div *ngIf="nombre.invalid && nombre.touched" class="text-danger">
+                    El nombre es obligatorio.
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="descripcion" class="form-label">Descripción</label>
+                  <input type="text" class="form-control" id="descripcion" [(ngModel)]="prod.descripcion" name="descripcion"
+                    #descripcion="ngModel" required>
+                  <div *ngIf="descripcion.invalid && descripcion.touched" class="text-danger">
+                    La descripción es obligatoria.
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="precio" class="form-label">Precio</label>
+                  <input type="number" class="form-control" id="precio" [(ngModel)]="prod.precio" name="precio" 
+                    #precio="ngModel" required min="0.01">
+                  <div *ngIf="precio.invalid && precio.touched" class="text-danger">
+                    El precio debe ser mayor a 0.
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="stock" class="form-label">Stock</label>
+                  <input type="number" class="form-control" id="stock" [(ngModel)]="prod.stock" name="stock" 
+                    #stock="ngModel" required min="1">
+                  <div *ngIf="stock.invalid && stock.touched" class="text-danger">
+                    El stock debe ser mayor a 0.
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="nuevo" class="form-label">Nuevo</label>
+                  <select class="form-control" id="nuevo" [(ngModel)]="prod.nuevo" name="nuevo">
+                    <option [value]="1">Sí</option>
+                    <option [value]="0">No</option>
+                  </select>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                  <button type="submit" class="btn btn-success me-2" 
+                    [disabled]="formulario.invalid">Guardar Cambios</button>
+                  <button type="button" class="btn btn-danger" 
+                    (click)="eliminarProducto(prod.id)">Eliminar Producto</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

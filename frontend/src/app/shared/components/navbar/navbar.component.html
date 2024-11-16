@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom border-body">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Electro</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <!-- Solo mostrar el enlace si loggedInUser está disponible -->
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#" *ngIf="loggedInUser">Inicio</a>
+          </li>
+  
+          <!-- Mostrar "Mis Cosas" solo si el usuario tiene el rol de ADMIN -->
+          <li class="nav-item dropdown" *ngIf="loggedInUser">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false" *ngIf="loggedInUser.role === 'ROLE_ADMIN'">
+              Administracion
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" routerLink="/Products">Productos</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" routerLink="/Addproducts">Agregar Productos</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown" *ngIf="loggedInUser">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false" *ngIf="loggedInUser.role === 'ROLE_USER'">
+              Menú
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Comprar</a></li>
+              <li><a class="dropdown-item" href="#">Carrito</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Historial de Compras</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  

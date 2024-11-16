@@ -1,0 +1,17 @@
+/home/cris/Descargas/Sum2_fs3/sum2_fs3/src/main/java/com/newproject/DemoApplication.java
+/home/cris/Descargas/Sum2_fs3/sum2_fs3/src/main/java/com/newproject/controller/AuthController.java
+/home/cris/Descargas/Sum2_fs3/sum2_fs3/src/main/java/com/newproject/controller/ProductoController.java
+/home/cris/Descargas/Sum2_fs3/sum2_fs3/src/main/java/com/newproject/controller/UsuarioController.java
+/home/cris/Descargas/Sum2_fs3/sum2_fs3/src/main/java/com/newproject/exception/GlobalExceptionHandler.java
+/home/cris/Descargas/Sum2_fs3/sum2_fs3/src/main/java/com/newproject/exception/ResourceNotFoundException.java
+/home/cris/Descargas/Sum2_fs3/sum2_fs3/src/main/java/com/newproject/model/Producto.java
+/home/cris/Descargas/Sum2_fs3/sum2_fs3/src/main/java/com/newproject/model/Role.java
+/home/cris/Descargas/Sum2_fs3/sum2_fs3/src/main/java/com/newproject/model/Usuario.java
+/home/cris/Descargas/Sum2_fs3/sum2_fs3/src/main/java/com/newproject/repository/ProductoRepository.java
+/home/cris/Descargas/Sum2_fs3/sum2_fs3/src/main/java/com/newproject/repository/UsuarioRepository.java
+/home/cris/Descargas/Sum2_fs3/sum2_fs3/src/main/java/com/newproject/security/JwtRequestFilter.java
+/home/cris/Descargas/Sum2_fs3/sum2_fs3/src/main/java/com/newproject/security/JwtUtil.java
+/home/cris/Descargas/Sum2_fs3/sum2_fs3/src/main/java/com/newproject/security/SecurityConfig.java
+/home/cris/Descargas/Sum2_fs3/sum2_fs3/src/main/java/com/newproject/service/CustomUserDetailsService.java
+/home/cris/Descargas/Sum2_fs3/sum2_fs3/src/main/java/com/newproject/service/ProductoService.java
+/home/cris/Descargas/Sum2_fs3/sum2_fs3/src/main/java/com/newproject/service/UsuarioService.java

@@ -1,0 +1,48 @@
+<table class="table align-middle mb-0 bg-white mt-5" >
+    <thead class="bg-light">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Username</th>
+            <th>Contraseña</th>
+            <th>Rol</th>
+            <th>Accion</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let usuario of usuarios">
+            <td>
+                <input *ngIf="usuario.editing" [(ngModel)]="usuario.nombre" />
+                <span *ngIf="!usuario.editing">{{ usuario.nombre }}</span>
+            </td>
+            <td>
+                <input *ngIf="usuario.editing" [(ngModel)]="usuario.apellido" />
+                <span *ngIf="!usuario.editing">{{ usuario.apellido }}</span>
+            </td>
+            <td>
+                <input *ngIf="usuario.editing" [(ngModel)]="usuario.username" />
+                <span *ngIf="!usuario.editing">{{ usuario.username }}</span>
+            </td>
+            <td>
+                <input *ngIf="usuario.editing" [(ngModel)]="usuario.password" />
+                <span *ngIf="!usuario.editing">{{ usuario.password }}</span>
+            </td>
+            <td>
+                <input *ngIf="usuario.editing" [(ngModel)]="usuario.rol" />
+                <span *ngIf="!usuario.editing">{{ usuario.rol }}</span>
+            </td>
+            <td>
+                <button *ngIf="!usuario.editing" type="button" class="btn btn-sm btn-primary me-2"
+                    (click)="usuario.editing = true">Editar</button>
+                <button *ngIf="usuario.editing" type="button" class="btn btn-sm btn-success me-2"
+                    (click)="guardarUsuario(usuario)">Guardar</button>
+                <button *ngIf="usuario.editing" type="button" class="btn btn-sm btn-secondary me-2"
+                    (click)="cancelarEdicion(usuario)">
+                    Cancelar
+                </button>
+                <button *ngIf="!usuario.editing" type="button" class="btn btn-sm btn-danger"
+                    (click)="eliminarUsuario(usuario.id)">Eliminar</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

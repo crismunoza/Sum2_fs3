@@ -1,0 +1,35 @@
+/* Asegura que el contenedor de la sección ocupe toda la altura de la pantalla */
+.vh-100 {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Oculta cualquier desbordamiento para evitar el dash */
+  }
+  
+  /* Ajusta el contenedor personalizado h-custom-2 */
+  .h-custom-2 {
+    height: 100vh;
+    padding: 0; /* Elimina padding adicional */
+  }
+  
+  /* Asegura que la imagen de la derecha ocupe toda la altura y anchura sin espacios extra */
+  .col-sm-6 img {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    object-position: left;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Ajuste opcional para imágenes de fondo en pantallas grandes */
+  @media (min-width: 1025px) {
+    .bg-image-vertical {
+      position: relative;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: auto 100%;
+    }
+  }
+  

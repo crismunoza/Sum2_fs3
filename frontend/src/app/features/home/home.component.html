@@ -1,0 +1,48 @@
+<!-- imagen seccion -->
+<div class="image-container">
+    <img src="/img/banner.jpg" alt="Hero Image" class="hero-image">
+</div>
+<!-- Carrusel de Nuevas Preventas -->
+<!-- Sección de los antiguos -->
+<div class="container my-4">
+    <h2 class="text-center text-custom" id="newproductos">Nuevos Productos</h2>
+    <div class="row">
+        <div *ngFor="let prod of productosNuevos" class="col-md-3 col-sm-6 mb-3">
+            <div class="card">
+                <img [src]="prod.url" class="card-img-top" [alt]="prod.nombre">
+                <div class="card-body">
+                    <h5 class="card-title">{{ prod.nombre }}</h5>
+                    <span class="card-subtitle">{{ prod.descripcion }}</span>
+                    <br>
+                    <p class="card-text">
+                        <span class="text-danger">en ${{ prod.precio }}</span> <br>
+                        <span *ngIf="prod.stock === 0">Sin Stock</span>
+                        <span *ngIf="prod.stock > 0">En Stock</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Sección de los antiguos -->
+<div class="container my-4">
+    <h2 class="text-center text-custom" id="productos">Productos</h2>
+    <div class="row">
+        <div *ngFor="let prod of productosAntiguos" class="col-md-3 col-sm-6 mb-3">
+            <div class="card">
+                <img [src]="prod.url" class="card-img-top" [alt]="prod.nombre">
+                <div class="card-body">
+                    <h5 class="card-title">{{ prod.nombre }}</h5>
+                    <span class="card-subtitle">{{ prod.descripcion }}</span>
+                    <br>
+                    <p class="card-text">
+                        <span class="text-danger">en ${{ prod.precio }}</span> <br>
+                        <span *ngIf="prod.stock === 0">Sin Stock</span>
+                        <span *ngIf="prod.stock > 0">En Stock</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+version: '3.9'
+
+services:
+  backend:
+    build:
+      context: ./sum2_fs3
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./sum2_fs3/Wallet_ROP5KSUKVLN2GV0H:/app/wallet
+    environment:
+      SPRING_DATASOURCE_USERNAME: SPRING_BOOT_EXP1
+      SPRING_DATASOURCE_PASSWORD: SPRINGBOOT_Exp1
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "4200:80"
+    volumes:
+      - ./frontend:/app
+  

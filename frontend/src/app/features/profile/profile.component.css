@@ -1,0 +1,14 @@
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.form-control {
+    margin-bottom: 1rem;
+}

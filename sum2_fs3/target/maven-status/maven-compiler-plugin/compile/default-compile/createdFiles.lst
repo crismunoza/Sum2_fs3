@@ -1,0 +1,17 @@
+com/newproject/exception/ResourceNotFoundException.class
+com/newproject/model/Role.class
+com/newproject/controller/UsuarioController.class
+com/newproject/security/JwtUtil.class
+com/newproject/repository/ProductoRepository.class
+com/newproject/security/JwtRequestFilter.class
+com/newproject/exception/GlobalExceptionHandler.class
+com/newproject/service/CustomUserDetailsService.class
+com/newproject/repository/UsuarioRepository.class
+com/newproject/controller/AuthController.class
+com/newproject/service/ProductoService.class
+com/newproject/model/Producto.class
+com/newproject/controller/ProductoController.class
+com/newproject/model/Usuario.class
+com/newproject/security/SecurityConfig.class
+com/newproject/service/UsuarioService.class
+com/newproject/DemoApplication.class

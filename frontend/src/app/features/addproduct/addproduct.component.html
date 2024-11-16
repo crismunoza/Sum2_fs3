@@ -1,0 +1,60 @@
+<div class="container">
+    <h2 class="text-center">Crear Nuevo Producto</h2>
+
+    <form id="nuevoProductoForm" enctype="multipart/form-data" (ngSubmit)="crearProducto()">
+        <div class="form-card">
+          <!-- Vista previa de la imagen -->
+          <div class="preview-container">
+            <div *ngIf="imagePreview">
+              <h5>Vista previa:</h5>
+              <img [src]="imagePreview" class="preview-img" alt="Vista previa de la imagen">
+            </div>
+          </div>
+      
+          <!-- Detalles del formulario -->
+          <div class="form-details">
+            <div class="card">
+              <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" [(ngModel)]="producto.nombre" name="nombre" class="form-control"
+                  placeholder="Ingrese el nombre del producto" required>
+              </div>
+      
+              <div class="form-group">
+                <label for="descripcion">Descripción</label>
+                <textarea id="descripcion" [(ngModel)]="producto.descripcion" name="descripcion" class="form-control"
+                  placeholder="Ingrese la descripción del producto" required></textarea>
+              </div>
+      
+              <div class="form-group">
+                <label for="precio">Precio</label>
+                <input type="number" id="precio" [(ngModel)]="producto.precio" name="precio" class="form-control"
+                  placeholder="Ingrese el precio del producto" required>
+              </div>
+      
+              <div class="form-group">
+                <label for="stock">Stock</label>
+                <input type="number" id="stock" [(ngModel)]="producto.stock" name="stock" class="form-control"
+                  placeholder="Ingrese la cantidad de stock" required>
+              </div>
+      
+              <div class="form-group">
+                <label for="nuevo">¿Es Nuevo?</label>
+                <select id="nuevo" [(ngModel)]="producto.nuevo" name="nuevo" class="form-control">
+                  <option value="1">Sí</option>
+                  <option value="0">No</option>
+                </select>
+              </div>
+      
+              <div class="form-group">
+                <label for="imagen" class="form-label">Selecciona una imagen</label>
+                <input type="file" id="imagen" class="form-control" (change)="onFileSelect($event)" accept="image/*" required>
+              </div>
+      
+              <button type="submit" class="btn btn-primary mt-3">Crear Producto</button>
+            </div>
+          </div>
+        </div>
+      </form>
+      
+</div>

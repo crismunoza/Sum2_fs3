@@ -1,0 +1,145 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+}
+
+.navbar-brand img {
+    height: 40px; /* Ajusta la altura del logo según sea necesario */
+    margin-right: 10px;
+    width: auto; /* Mantener la proporción de la imagen */
+}
+
+.image-container {
+    position: relative;
+    width: 100%; /* Ajusta el ancho del contenedor según sea necesario */
+    height: 400px; /* Ajusta la altura del contenedor según sea necesario */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor */
+    object-position: center; /* Centra la imagen en el contenedor */
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 350px; /* Altura mínima para todas las cards */
+    border: none; /* Elimina el borde de la card */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.card-img-top {
+    width: 100%; /* Ajusta el ancho de la imagen para que sea responsive */
+    height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
+    object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor */
+    object-position: center; /* Centra la imagen en el contenedor */
+    border: none; /* Elimina el borde de la imagen */
+}
+
+.product-card {
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none; /* Elimina el borde de la product card */
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product-card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.product-img {
+    width: 100%;
+    height: 100%; /* Ajusta la altura según sea necesario */
+    object-fit: cover; /* Asegura que la imagen cubra el área disponible */
+    object-position: center;
+    border: none; /* Elimina el borde de la imagen */
+}
+
+/* Cambia el color de fondo de la barra de navegación */
+.navbar {
+    background-color: #001F39; /* Azul Oscuro */
+}
+
+.navbar .navbar-custom {
+    color: #FFA726; /* Naranja */
+}
+
+.navbar .navbar-custom:hover {
+    color: #FFE082; /* Amarillo */
+}
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path stroke="rgba(255, 255, 255, 1)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/></svg>');
+}
+
+/* Colores personalizados para los encabezados */
+.text-custom {
+    color: #FFA726; /* Naranja */
+}
+
+/* Media queries para ajustes responsivos */
+@media (max-width: 768px) {
+    .image-container {
+        width: 90%; /* Ajusta el ancho del contenedor para pantallas más pequeñas */
+        height: 200px; /* Ajusta la altura para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-container {
+        width: 100%; /* Ajusta el ancho del contenedor para pantallas aún más pequeñas */
+        height: 150px; /* Ajusta la altura para pantallas aún más pequeñas */
+    }
+    
+}
+
+@media (max-width: 1080px) {
+    .image-container {
+        width: 100%; /* Ajusta el ancho del contenedor para pantallas aún más pequeñas */
+        height: 200px; /* Ajusta la altura para pantallas aún más pequeñas */
+    }
+}
+
+.hidden {
+    display: none !important;
+}
+
+#user-menu {
+    display: flex;
+    align-items: center;
+}
+
+#username-display {
+    margin-right: 10px; /* Espacio entre el nombre de usuario y el botón de cerrar sesión */
+}
+
+
+
