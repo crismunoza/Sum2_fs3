@@ -88,4 +88,8 @@ export class ProfileComponent implements OnInit {
       }
     });
   }
+
+  handleError(error: Error) {
+    console.error(error.message);
+  }
 }
